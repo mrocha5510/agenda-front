@@ -1,0 +1,47 @@
+<div>
+    <h1 mat-dialog-title>Informacion de Contacto</h1>
+    <div mat-dialog-content>
+            <form (ngSubmit)="onSubmit()" #formulario="ngForm">
+                <mat-form-field class="example-form-field" style="margin-right: 10px;">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput  type="text" [(ngModel)]="data.nombre" name="nombre"/>
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field" >
+                    <mat-label>Nota</mat-label>
+                    <input matInput  type="text" [(ngModel)]="data.nota" name="nota">
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field" style="margin-right: 10px;">
+                    <mat-label>Cumpleaños</mat-label>
+                    <input matInput  type="date" [(ngModel)]="data.fecha_cumpleanios" name="fecha_cumpleanios">
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field" >
+                    <mat-label>Pagina Web</mat-label>
+                    <input matInput  type="text" [(ngModel)]="data.pagina_web" name="pagina_web">
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field" style="margin-right: 10px;">
+                    <mat-label>Empresa</mat-label>
+                    <input matInput  type="text" [(ngModel)]="data.empresa" name="empresa">
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field" >
+                    <mat-label>Telefono</mat-label>
+                    <input matInput  type="tel" [(ngModel)]="data.telefono" name="telefono">
+                </mat-form-field>
+
+                <mat-form-field class="example-form-field" style="margin-right: 10px;">
+                    <mat-label>Email</mat-label>
+                    <input matInput  type="tel" [(ngModel)]="data.email" name="email">
+                </mat-form-field>
+    
+                <mat-form-field class="example-form-field">
+                    <mat-label>Direccion</mat-label>
+                    <input matInput  type="text" [(ngModel)]="data.direccion" name="direccion">
+                </mat-form-field>
+                <button type="submit" [disabled]="!formulario.form.valid">Enviar</button>
+            </form>
+        </div>   
+</div>
